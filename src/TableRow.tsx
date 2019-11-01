@@ -53,6 +53,7 @@ export class TableRow extends React.PureComponent<Partial<TableBodyProps>> {
                     flexDirection: "row",
                     justifyContent: "stretch"
                 }}
+                wrap={false}
             >
                 {
                     rowCells.map((rc, columnIndex) => React.cloneElement(rc, {
