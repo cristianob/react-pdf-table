@@ -1,7 +1,7 @@
 import * as React from "react";
 import {TableBorder, TableCell} from "./TableCell";
 import {DataTableCell} from "./DataTableCell";
-import {View} from "@react-pdf/renderer";
+import ReactPDF, {View} from "@react-pdf/renderer";
 import {getDefaultBorderIncludes} from "./Utils";
 import {TableBodyProps} from "./TableBody";
 
@@ -51,8 +51,8 @@ export class TableRow extends React.PureComponent<Partial<TableBodyProps>> {
                     width: "100%",
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "stretch"
-                }}
+                    alignItems: "stretch"
+                } as ReactPDF.Style}
                 wrap={false}
             >
                 {

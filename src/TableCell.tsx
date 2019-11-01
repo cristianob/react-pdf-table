@@ -1,5 +1,5 @@
 import * as React from "react";
-import ReactPDF, {Text, View} from "@react-pdf/renderer";
+import ReactPDF, { Text, View } from "@react-pdf/renderer";
 import {getDefaultBorderIncludes} from "./Utils";
 
 /**
@@ -78,13 +78,11 @@ export class TableCell extends React.PureComponent<TableCellProps> {
                 style={[
                     {
                         flex: this.props.weighting || 1,
-                        justifyContent: "stretch",
+                        alignItems: "stretch",
                         textAlign: this.props.textAlign || "left",
                         fontSize: this.props.fontSize || (this.props.isHeader === true ? 14 : 12),
                         borderRight: includeRightBorder && "1pt solid black",
-                        wordWrap: "break-word",
-                        whiteSpace: "pre-wrap"
-                    },
+                    } as ReactPDF.Style,
                     ...this.props.styles
                 ]}
                 wrap={false}
