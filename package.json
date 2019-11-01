@@ -1,6 +1,6 @@
 {
-  "name": "@david.kucsai/react-pdf-table",
-  "version": "0.1.1",
+  "name": "@cristianob/react-pdf-table",
+  "version": "0.1.2",
   "description": "Provides tables for the @react-pdf/renderer.",
   "main": "./lib/index.js",
   "scripts": {
@@ -68,12 +68,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmk99/react-pdf-table.git"
+    "url": "git+https://github.com/cristianob/react-pdf-table.git"
   },
   "bugs": {
-    "url": "https://github.com/dmk99/react-pdf-table/issues"
+    "url": "https://github.com/cristianob/react-pdf-table/issues"
   },
-  "homepage": "https://github.com/dmk99/react-pdf-table.git#README",
+  "homepage": "https://github.com/cristianob/react-pdf-table.git#README",
   "types": "./lib/index.d.ts",
   "dependencies": {}
 }

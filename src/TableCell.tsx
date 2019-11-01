@@ -87,7 +87,7 @@ export class TableCell extends React.PureComponent<TableCellProps> {
                     },
                     ...this.props.styles
                 ]}
-                wrap={true}
+                wrap={false}
             >
                 {content}
             </View>
