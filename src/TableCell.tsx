@@ -71,6 +71,8 @@ export class TableCell extends React.PureComponent<TableCellProps> {
             content = this.props.children;
         }
 
+        const cellStyle: ReactPDF.Style[] = this.props.styles || [];
+
         const {includeRightBorder} = getDefaultBorderIncludes(this.props);
 
         return (
@@ -83,7 +85,7 @@ export class TableCell extends React.PureComponent<TableCellProps> {
                         fontSize: this.props.fontSize || (this.props.isHeader === true ? 14 : 12),
                         borderRight: includeRightBorder && "1pt solid black",
                     } as ReactPDF.Style,
-                    ...this.props.styles
+                    ...cellStyle
                 ]}
                 wrap={false}
             >
