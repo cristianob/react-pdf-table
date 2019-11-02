@@ -19,19 +19,19 @@ export class NestedTables extends React.Component<void, NestedTablesState> {
                     data={this.state.data}
                 >
                     <TableHeader>
-                        <TableCell>
+                        <TableCell width="20%">
                             First Name
                         </TableCell>
-                        <TableCell>
+                        <TableCell width="20%">
                             Last Name
                         </TableCell>
-                        <TableCell>
+                        <TableCell width="20%">
                             DOB
                         </TableCell>
-                        <TableCell>
+                        <TableCell width="20%">
                             Country
                         </TableCell>
-                        <TableCell>
+                        <TableCell width="20%">
                             <Table>
                                 <TableHeader
                                     fontSize={8}
@@ -41,20 +41,20 @@ export class NestedTables extends React.Component<void, NestedTablesState> {
                                     includeLeftBorder={false}
                                     includeRightBorder={false}
                                 >
-                                    <TableCell>One</TableCell>
-                                    <TableCell>Two</TableCell>
-                                    <TableCell>Three</TableCell>
-                                    <TableCell>Four</TableCell>
+                                    <TableCell width="25%">One</TableCell>
+                                    <TableCell width="25%">Two</TableCell>
+                                    <TableCell width="25%">Three</TableCell>
+                                    <TableCell width="25%">Four</TableCell>
                                 </TableHeader>
                             </Table>
                         </TableCell>
                     </TableHeader>
                     <TableBody>
-                        <DataTableCell getContent={(r: HumanRow) => r.firstName}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.lastName}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.dob.toLocaleString()}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.country}/>
-                        <DataTableCell getContent={(r: HumanRow) => (
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.firstName}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.lastName}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.dob.toLocaleString()}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.country}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => (
                             <Table
                                 data={[r]}
                             >
@@ -65,10 +65,10 @@ export class NestedTables extends React.Component<void, NestedTablesState> {
                                     includeLeftBorder={false}
                                     includeRightBorder={false}
                                 >
-                                    <DataTableCell getContent={(r: HumanRow) => r.randomValues.one.toString()}/>
-                                    <DataTableCell getContent={(r: HumanRow) => r.randomValues.two.toString()}/>
-                                    <DataTableCell getContent={(r: HumanRow) => r.randomValues.three.toString()}/>
-                                    <DataTableCell getContent={(r: HumanRow) => r.randomValues.four.toString()}/>
+                                    <DataTableCell width="25%" getContent={(r: HumanRow) => r.randomValues.one.toString()}/>
+                                    <DataTableCell width="25%" getContent={(r: HumanRow) => r.randomValues.two.toString()}/>
+                                    <DataTableCell width="25%" getContent={(r: HumanRow) => r.randomValues.three.toString()}/>
+                                    <DataTableCell width="25%" getContent={(r: HumanRow) => r.randomValues.four.toString()}/>
                                 </TableBody>
                             </Table>
                         )}/>

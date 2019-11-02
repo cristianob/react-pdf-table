@@ -30,10 +30,10 @@ export interface TableBorder {
 
 export interface TableCellProps extends TableBorder {
     /**
-     * The weighting of a cell based on the flex layout styles.
+     * The width of a cell based on the flex layout styles.
      * This value is between 0..1, if not specified 1 is assumed, this will take up the remaining available space.
      */
-    weighting?: number;
+    width: number | string;
 
     /**
      * Extra styling to apply. These will override existing styles with the same key.
@@ -79,7 +79,7 @@ export class TableCell extends React.PureComponent<TableCellProps> {
             <View
                 style={[
                     {
-                        flex: this.props.weighting || 1,
+                        width: this.props.width,
                         alignItems: "stretch",
                         textAlign: this.props.textAlign || "left",
                         fontSize: this.props.fontSize || (this.props.isHeader === true ? 14 : 12),

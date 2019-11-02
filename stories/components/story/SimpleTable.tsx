@@ -9,7 +9,7 @@ interface SimpleTableHeaderState {
 
 export class SimpleTable extends React.Component<{}, SimpleTableHeaderState> {
     state = {
-        data: generateRandomData(20)
+        data: generateRandomData(200)
     };
 
     render() {
@@ -19,28 +19,28 @@ export class SimpleTable extends React.Component<{}, SimpleTableHeaderState> {
                     data={this.state.data}
                 >
                     <TableHeader>
-                        <TableCell>
+                        <TableCell width="20%">
                             First Name
                         </TableCell>
-                        <TableCell>
+                        <TableCell width="20%">
                             Last Name
                         </TableCell>
-                        <TableCell>
+                        <TableCell width="20%">
                             DOB
                         </TableCell>
-                        <TableCell>
+                        <TableCell width="20%">
                             Country
                         </TableCell>
-                        <TableCell>
+                        <TableCell width="20%">
                             Phone Number
                         </TableCell>
                     </TableHeader>
                     <TableBody>
-                        <DataTableCell getContent={(r: HumanRow) => r.firstName}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.lastName}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.dob.toLocaleString()}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.country}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.phoneNumber}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.firstName}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.lastName}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.dob.toLocaleString()}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.country}/>
+                        <DataTableCell width="20%" getContent={(r: HumanRow) => r.phoneNumber}/>
                     </TableBody>
                 </Table>
             </PdfContainer>

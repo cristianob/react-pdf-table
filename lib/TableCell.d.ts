@@ -7,7 +7,7 @@ export interface TableBorder {
     includeLeftBorder?: boolean;
 }
 export interface TableCellProps extends TableBorder {
-    weighting?: number;
+    width: number | string;
     styles?: ReactPDF.Style[];
     textAlign?: "left" | "center" | "right";
     isHeader?: boolean;

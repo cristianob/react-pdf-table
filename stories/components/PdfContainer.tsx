@@ -24,7 +24,8 @@ export class PdfContainer extends PureComponent<PdfContainerProps> {
                         size={this.props.pageSize || "A4"}
                         style={{
                             margin: 20,
-                            paddingRight: 40
+                            padding: 20,
+                            paddingRight: 80
                         }}
                     >
                         {this.props.children}

@@ -14,13 +14,13 @@ interface SimpleTableWithWeightingState {
 
 export class SimpleTableWithWeighting extends React.Component<{}, SimpleTableWithWeightingState> {
     state = {
-        data: generateRandomData(20)
+        data: generateRandomData(80)
     };
 
     private generateWeightingOptions = (): {[key: string]: number}[] => {
         const result: any = {};
         for(let i = 1; i < 10; i++) {
-            result[`${i * 10}%`] = i / 10;
+            result[`${i * 10}%`] = `${i * 10}%`;
         }
 
         return result;
@@ -37,22 +37,22 @@ export class SimpleTableWithWeighting extends React.Component<{}, SimpleTableWit
                         fontSize={text("fontSize", undefined)}
                     >
                         <TableCell
-                            weighting={options("column 1 weighting", this.generateWeightingOptions(), undefined, {display: "select"})}
+                            width={options("column 1 weighting", this.generateWeightingOptions(), undefined, {display: "select"})}
                         >
                             First Name
                         </TableCell>
                         <TableCell
-                            weighting={options("column 2 weighting", this.generateWeightingOptions(), undefined, {display: "select"})}
+                            width={options("column 2 weighting", this.generateWeightingOptions(), undefined, {display: "select"})}
                         >
                             Last Name
                         </TableCell>
-                        <TableCell>
+                        <TableCell width={options("column 3 weighting", this.generateWeightingOptions(), undefined, { display: "select" })}>
                             DOB
                         </TableCell>
-                        <TableCell>
+                        <TableCell width={options("column 4 weighting", this.generateWeightingOptions(), undefined, { display: "select" })}>
                             Country
                         </TableCell>
-                        <TableCell>
+                        <TableCell width={options("column 5 weighting", this.generateWeightingOptions(), undefined, { display: "select" })}>
                             Phone Number
                         </TableCell>
                     </TableHeader>
@@ -61,16 +61,16 @@ export class SimpleTableWithWeighting extends React.Component<{}, SimpleTableWit
                         fontSize={text("fontSize", undefined)}
                     >
                         <DataTableCell
-                            weighting={options("column 1 weighting", this.generateWeightingOptions(), undefined, {display: "select"})}
+                            width={options("column 1 weighting", this.generateWeightingOptions(), undefined, {display: "select"})}
                             getContent={(r: HumanRow) => r.firstName}
                         />
                         <DataTableCell
-                            weighting={options("column 2 weighting", this.generateWeightingOptions(), undefined, {display: "select"})}
+                            width={options("column 2 weighting", this.generateWeightingOptions(), undefined, {display: "select"})}
                             getContent={(r: HumanRow) => r.lastName}
                         />
-                        <DataTableCell getContent={(r: HumanRow) => r.dob.toLocaleString()}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.country}/>
-                        <DataTableCell getContent={(r: HumanRow) => r.phoneNumber}/>
+                        <DataTableCell width={options("column 3 weighting", this.generateWeightingOptions(), undefined, { display: "select" })} getContent={(r: HumanRow) => r.dob.toLocaleString()}/>
+                        <DataTableCell width={options("column 4 weighting", this.generateWeightingOptions(), undefined, { display: "select" })} getContent={(r: HumanRow) => r.country}/>
+                        <DataTableCell width={options("column 5 weighting", this.generateWeightingOptions(), undefined, { display: "select" })} getContent={(r: HumanRow) => r.phoneNumber}/>
                     </TableBody>
                 </Table>
             </PdfContainer>
